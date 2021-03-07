@@ -149,7 +149,7 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  min-height: calc(100vh - 8rem);
+  min-height: 100vh;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -259,7 +259,6 @@ body {
 }
 
 .ocean {
-  /* height: 5%; */
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -269,9 +268,9 @@ body {
 .wave {
   background: url(../img/wave.svg) repeat-x;
   position: absolute;
-  top: -117px;
+  bottom: 0;
   width: 6400px;
-  height: 235px;
+  height: 180px;
   animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
 }
