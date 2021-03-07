@@ -12,19 +12,39 @@ body {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width:  768px) { html { font-size: 12px; } }
-@media only screen and (min-width:  769px) { html { font-size: 13px; } }
-@media only screen and (min-width: 1024px) { html { font-size: 14px; } }
-@media only screen and (min-width: 1200px) { html { font-size: 15px; } }
-@media only screen and (min-width: 1400px) { html { font-size: 16px; } }
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
 
 body {
-  background-color: #F9F3EB;
+  background-color: #d8f1fe;
 }
 
 * {
-  font-family: 'proxima-nova', sans-serif;
-  color: #000;
+  font-family: 'dosis', sans-serif;
+  color: #1d3149;
   text-rendering: optimizeLegibility;
 }
 
@@ -43,6 +63,25 @@ body {
   z-index: 100;
 }
 
+.btn {
+  padding: 0.8rem 1.5rem;
+  background: #9addfd;
+  color: #1d3149;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  max-width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.btn:hover {
+  color: #1d3149;
+  background: #4abef9;
+}
+
 /* -- Nav -- */
 
 .nav {
@@ -55,50 +94,52 @@ body {
 
 .nav-left {
   display: inline-flex;
-  align-items: self-end;
+  align-items: center;
 }
 
 .nav-right {
   display: inline-flex;
-  align-items: self-end;
+  align-items: center;
 }
 
 .nav-logo {
   width: 4rem;
   min-height: 3rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .nav-item {
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-decoration: none;
 }
 
 .nav-item:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav-btn {
-  padding: .5rem 1.5rem;
-  background: #5A8F69;
-  color: #fff;
-  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: #9addfd;
+  color: #1d3149;
+  border-radius: 0.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none !important;
 }
 
 .nav-btn:hover {
-  background-color: #4B7958;
+  color: #1d3149;
+  background: #4abef9;
 }
 
 .nav-btn:active {
-  background-color: #000;
+  background: #4abef9;
+  color: #1d3149;
 }
 
 .nav-txt {
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -108,7 +149,7 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  min-height: calc(100vh - 8rem);
+  min-height: 100vh;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -120,10 +161,10 @@ body {
 }
 
 .hero-brand-logo {
-  width: 8rem;
+  width: 12rem;
   min-height: 6rem;
   margin: 1rem auto;
-  transition: all .1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .hero-brand-logo:hover {
@@ -135,15 +176,17 @@ body {
 }
 
 .hero-brand-name {
-  margin: 1rem auto;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0.5rem auto;
   min-height: 3rem;
 }
 
 .hero-brand-brief {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.7rem;
+  font-weight: 300;
   text-align: center;
-  letter-spacing: -0.1rem;
+  letter-spacing: 0.2rem;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -154,6 +197,7 @@ body {
   align-content: center;
   justify-content: center;
   padding-top: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .cta {
@@ -161,7 +205,11 @@ body {
   align-content: center;
   text-decoration: none;
   margin: 0 1rem;
-  transition: all .1s ease-out; 
+  transition: all 0.1s ease-out;
+  background-color: #1d3149;
+  border-radius: 50%;
+  padding: 8px;
+  align-items: center;
 }
 
 .cta:hover {
@@ -173,8 +221,8 @@ body {
 }
 
 .cta-img {
+  filter: invert(89%) sepia(74%) saturate(3317%) hue-rotate(176deg) brightness(103%) contrast(108%);
   width: 2.2rem;
-  margin-right: .7rem;
 }
 
 .cta-lbl {
@@ -183,73 +231,9 @@ body {
   line-height: 3rem;
 }
 
-.plains {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.plain-left {
-  position: absolute;
-  bottom: -40rem;
-  left: -30rem;
-  width: 50rem;
-  height: 50rem;
-  
-  border-radius: 50%;
-  background-color: #78B388;
-}
-
-.plain-center-bg {
-  position: absolute;
-  bottom: -23rem;
-  left: -25vw;
-  width: 100vw;
-  height: 30rem;
-  
-  border-radius: 50%;
-  background-color: #5A8F69;
-}
-
-.plain-center-fg {
-  position: absolute;
-  bottom: -23rem;
-  right: -15vw;
-  width: 70vw;
-  height: 30rem;
-  
-  border-radius: 50%;
-  background-color: #78B388;
-}
-
-.plain-right {
-  position: absolute;
-  bottom: -46rem;
-  right: -40rem;
-  width: 60rem;
-  height: 60rem;
-  
-  border-radius: 50%;
-  background-color: #5A8F69;
-}
-
-.cow {
-  position: absolute;
-  width: 5rem;
-}
-
 @media only screen and (min-width: 769px) {
   .hero {
     margin: -4rem auto 0;
-  }
-
-  .plains {
-    display: block;
   }
 }
 
@@ -260,9 +244,9 @@ body {
   right: 2rem;
   width: 18rem;
   background: #fff;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   height: auto;
-  transition: all .1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .alert:hover {
@@ -271,5 +255,47 @@ body {
 
 .alert-time {
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ocean {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wave {
+  background: url(../img/wave.svg) repeat-x;
+  position: absolute;
+  bottom: 0;
+  width: 6400px;
+  height: 180px;
+  animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
 }
