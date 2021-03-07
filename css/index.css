@@ -43,7 +43,7 @@ body {
 }
 
 * {
-  font-family: "dosis", sans-serif;
+  font-family: 'dosis', sans-serif;
   color: #1d3149;
   text-rendering: optimizeLegibility;
 }
@@ -61,6 +61,25 @@ body {
   margin-left: auto;
   margin-right: auto;
   z-index: 100;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  background: #9addfd;
+  color: #1d3149;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  max-width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.btn:hover {
+  color: #1d3149;
+  background: #4abef9;
 }
 
 /* -- Nav -- */
@@ -178,6 +197,7 @@ body {
   align-content: center;
   justify-content: center;
   padding-top: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .cta {
@@ -186,6 +206,10 @@ body {
   text-decoration: none;
   margin: 0 1rem;
   transition: all 0.1s ease-out;
+  background-color: #1d3149;
+  border-radius: 50%;
+  padding: 8px;
+  align-items: center;
 }
 
 .cta:hover {
@@ -199,7 +223,6 @@ body {
 .cta-img {
   filter: invert(89%) sepia(74%) saturate(3317%) hue-rotate(176deg) brightness(103%) contrast(108%);
   width: 2.2rem;
-  margin-right: 0.7rem;
 }
 
 .cta-lbl {
@@ -208,64 +231,9 @@ body {
   line-height: 3rem;
 }
 
-.plains {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.plain-left {
-  position: absolute;
-  bottom: -40rem;
-  left: -30rem;
-  width: 50rem;
-  height: 50rem;
-  border-radius: 50%;
-  background-color: #78b388;
-}
-
-.plain-center-bg {
-  position: absolute;
-  bottom: -23rem;
-  left: -25vw;
-  width: 100vw;
-  height: 30rem;
-  border-radius: 50%;
-  background-color: #5a8f69;
-}
-
-.plain-center-fg {
-  position: absolute;
-  bottom: -23rem;
-  right: -15vw;
-  width: 70vw;
-  height: 30rem;
-  border-radius: 50%;
-  background-color: #78b388;
-}
-
-.plain-right {
-  position: absolute;
-  bottom: -46rem;
-  right: -40rem;
-  width: 60rem;
-  height: 60rem;
-  border-radius: 50%;
-  background-color: #5a8f69;
-}
-
 @media only screen and (min-width: 769px) {
   .hero {
     margin: -4rem auto 0;
-  }
-
-  .plains {
-    display: block;
   }
 }
 
