@@ -194,6 +194,7 @@ body {
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
+  z-index: 9999;
   align-content: center;
   justify-content: center;
   padding-top: 1.5rem;
